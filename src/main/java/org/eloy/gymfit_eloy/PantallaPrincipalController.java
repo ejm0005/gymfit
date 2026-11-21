@@ -45,7 +45,7 @@ public class PantallaPrincipalController {
     @FXML
     public void initialize() {
         //Cargar opciones en el ComboBox de provincias
-        cbProvincia.getItems().addAll("Sevilla", "Madrid", "Barcelona", "Valencia", "Málaga", "Zaragoza", "Bilbao");
+        cbProvincia.getItems().addAll("Almería", "Cádiz", "Córdoba", "Granada", "Huelva", "Jaén", "Málaga", "Sevilla");
 
         //Configurar los enlaces de columnas con la clase Socio
         colSocio.setCellValueFactory(cellData -> new javafx.beans.property.SimpleStringProperty(cellData.getValue().getNombreCompleto()));
