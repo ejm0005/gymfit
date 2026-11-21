@@ -1,0 +1,214 @@
+/*BASE Y TIPOGRAFÍA*/
+.root {
+    -fx-font-family: "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+    -fx-font-size: 10.5pt;
+    -fx-background-color: #F8FAFC;
+    -fx-text-fill: #0F172A;
+}
+
+.label {
+    -fx-text-fill: #0F172A;
+    -fx-font-weight: 600;
+}
+.titulo-tabla {
+    -fx-font-size: 20pt;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0F172A;
+    -fx-padding: 2px 0 4px 0;
+}
+
+/*BARRA SUPERIOR (MENÚ Y TOOLBAR)*/
+.menu-bar {
+    -fx-background-color: #ffffff;
+    -fx-padding: 2px 6px;
+    -fx-border-color: transparent transparent #CBD5E1 transparent;
+    -fx-border-width: 1px;
+
+}
+
+.menu-bar .menu .label {
+    -fx-text-fill: #000000;
+    -fx-font-weight: normal;
+}
+
+.menu-bar .menu:hover,
+.menu-bar .menu:showing, .menu-item:focused {
+    -fx-background-color: #6793ff;
+}
+
+.context-menu {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #CBD5E1;
+    -fx-border-width: 1px;
+    -fx-background-radius: 4px;
+    -fx-border-radius: 4px;
+}
+
+.menu-item .label {
+    -fx-text-fill: #0F172A;
+    -fx-font-weight: normal;
+}
+
+
+.menu-item:focused .label {
+    -fx-text-fill: #FFFFFF;
+}
+
+.tool-bar {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: transparent transparent #CBD5E1 transparent;
+    -fx-border-width: 1px;
+    -fx-padding: 6px 12px;
+}
+
+/*BOTONES*/
+.button {
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-padding: 6px 14px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+/* Botón Nuevo Socio */
+.btn-nuevo {
+    -fx-background-color: #1D4ED8;
+    -fx-text-fill: #FFFFFF;
+}
+
+.btn-nuevo:hover {
+    -fx-background-color: #1E40AF;
+}
+
+/* Botón Guardar */
+.btn-guardar {
+    -fx-background-color: #047857;
+    -fx-text-fill: #FFFFFF;
+}
+
+.btn-guardar:hover {
+    -fx-background-color: #065F46;
+}
+
+/* Botón Eliminar Ficha */
+.btn-eliminar {
+    -fx-background-color: #FEF2F2;
+    -fx-text-fill: #B91C1C;
+    -fx-border-color: #FCA5A5;
+    -fx-border-width: 1px;
+}
+
+.btn-eliminar:hover {
+    -fx-background-color: #B91C1C;
+    -fx-text-fill: #FFFFFF;
+    -fx-border-color: #B91C1C;
+}
+
+/*CONTENEDORES DEL FORMULARIO Y CAMPOS DE ENTRADA*/
+.split-pane {
+    -fx-background-color: #F8FAFC;
+}
+
+.split-pane > .split-pane-divider {
+    -fx-background-color: #CBD5E1;
+    -fx-padding: 0 1px 0 1px;
+}
+
+.text-field,
+.combo-box,
+.date-picker > .text-field {
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #0F172A;
+    -fx-prompt-text-fill: #64748B;
+    -fx-border-color: #94A3B8;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+}
+
+.text-field:focused,
+.combo-box:focused,
+.date-picker:focused > .text-field {
+    -fx-border-color: #1D4ED8;
+    -fx-border-width: 2px;
+}
+
+/* Estilo monoespaciado para el IBAN */
+#campoIban {
+    -fx-font-family: "Consolas", "Courier New", monospace;
+    -fx-font-size: 10.5pt;
+}
+
+/* RadioButtons y CheckBoxes */
+.radio-button,
+.check-box {
+    -fx-text-fill: #0F172A;
+    -fx-font-weight: normal;
+}
+
+.radio-button:selected .dot {
+    -fx-background-color: #1D4ED8;
+}
+
+.check-box:selected .box {
+    -fx-background-color: #1D4ED8;
+    -fx-border-color: #1D4ED8;
+}
+
+.check-box:selected .mark {
+    -fx-background-color: #FFFFFF;
+}
+
+/*TABLA DE SOCIOS*/
+#tablaSocios {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #CBD5E1;
+    -fx-border-width: 1px;
+}
+
+#tablaSocios .column-header-background {
+    -fx-background-color: #0F172A;
+}
+
+#tablaSocios .column-header,
+#tablaSocios .filler {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent #334155 transparent transparent;
+    -fx-size: 34px;
+}
+
+#tablaSocios .column-header .label {
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER_LEFT;
+}
+
+#tablaSocios .table-row-cell {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: transparent transparent #E2E8F0 transparent;
+    -fx-cell-size: 32px;
+}
+
+#tablaSocios .table-row-cell:odd {
+    -fx-background-color: #F8FAFC;
+}
+
+#tablaSocios .table-row-cell:hover {
+    -fx-background-color: #EFF6FF;
+}
+
+#tablaSocios .table-row-cell:selected {
+    -fx-background-color: #1D4ED8;
+}
+
+#tablaSocios .table-row-cell:selected .text {
+    -fx-fill: #FFFFFF;
+    -fx-font-weight: bold;
+}
+
+/*BARRA INFERIOR DE ATAJOS*/
+.border-pane > .label {
+    -fx-text-fill: #334155;
+    -fx-font-size: 9.5pt;
+    -fx-font-weight: normal;
+}

@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.eloy.gymfit_eloy.PantallaPrincipalController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.eloy.gymfit_eloy.PantallaPrincipalController">
    <top>
       <VBox prefHeight="65.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
@@ -39,10 +39,10 @@
             </MenuBar>
             <ToolBar prefHeight="40.0" prefWidth="200.0">
               <items>
-                <Button fx:id="btnNuevoSocio" mnemonicParsing="false" onAction="#handleNuevoSocio" text="➕ Nuevo socio" />
-                  <Button fx:id="btnGuardar" mnemonicParsing="false" onAction="#handleGuardar" text="💾 Guardar" />
-                  <Separator opacity="0.0" orientation="VERTICAL" prefHeight="30.0" prefWidth="981.0" />
-                  <Button fx:id="btnEliminarFicha" mnemonicParsing="false" onAction="#handleEliminarFicha" text="🗑 Eliminar ficha" />
+                <Button fx:id="btnNuevoSocio" mnemonicParsing="false" onAction="#handleNuevoSocio" styleClass="btn-nuevo" text="➕ Nuevo socio" />
+                  <Button fx:id="btnGuardar" mnemonicParsing="false" onAction="#handleGuardar" styleClass="btn-guardar" text="💾 Guardar" />
+                  <Separator opacity="0.0" orientation="VERTICAL" prefHeight="34.0" prefWidth="839.0" />
+                  <Button fx:id="btnEliminarFicha" mnemonicParsing="false" onAction="#handleEliminarFicha" styleClass="btn-eliminar" text="🗑 Eliminar ficha" />
               </items>
             </ToolBar>
          </children></VBox>
@@ -66,8 +66,8 @@
                         <ToggleGroup fx:id="opcionesSexo" />
                      </toggleGroup>
                   </RadioButton>
-                  <RadioButton id="sexoMujer" layoutX="88.0" layoutY="214.0" mnemonicParsing="false" text="Mujer" toggleGroup="$opcionesSexo" />
-                  <RadioButton id="sexoOtro" layoutX="155.0" layoutY="214.0" mnemonicParsing="false" text="Otro" toggleGroup="$opcionesSexo" />
+                  <RadioButton id="sexoMujer" layoutX="109.0" layoutY="214.0" mnemonicParsing="false" text="Mujer" toggleGroup="$opcionesSexo" />
+                  <RadioButton id="sexoOtro" layoutX="185.0" layoutY="214.0" mnemonicParsing="false" text="Otro" toggleGroup="$opcionesSexo" />
                   <Label layoutX="13.0" layoutY="243.0" text="Provincia" />
                   <ComboBox id="selectorProvincia" fx:id="cbProvincia" layoutX="13.0" layoutY="261.0" prefHeight="26.0" prefWidth="284.0" />
                   <Label layoutX="13.0" layoutY="367.0" text="Tipo de cuota" />
@@ -76,24 +76,24 @@
                         <ToggleGroup fx:id="opcionesCuota" />
                      </toggleGroup>
                   </RadioButton>
-                  <RadioButton id="cuotaPlus" layoutX="80.0" layoutY="385.0" mnemonicParsing="false" text="Plus" toggleGroup="$opcionesCuota" />
-                  <RadioButton id="cuotaPremium" layoutX="135.0" layoutY="385.0" mnemonicParsing="false" text="Premium" toggleGroup="$opcionesCuota" />
-                  <RadioButton id="cuotaJoven" layoutX="217.0" layoutY="385.0" mnemonicParsing="false" text="Joven" toggleGroup="$opcionesCuota" />
-                  <RadioButton id="cuotaSenior" layoutX="278.0" layoutY="385.0" mnemonicParsing="false" text="Senior" toggleGroup="$opcionesCuota" />
+                  <RadioButton id="cuotaPlus" layoutX="99.0" layoutY="385.0" mnemonicParsing="false" text="Plus" toggleGroup="$opcionesCuota" />
+                  <RadioButton id="cuotaPremium" layoutX="167.0" layoutY="385.0" mnemonicParsing="false" text="Premium" toggleGroup="$opcionesCuota" />
+                  <RadioButton id="cuotaJoven" layoutX="276.0" layoutY="385.0" mnemonicParsing="false" text="Joven" toggleGroup="$opcionesCuota" />
+                  <RadioButton id="cuotaSenior" layoutX="360.0" layoutY="385.0" mnemonicParsing="false" text="Senior" toggleGroup="$opcionesCuota" />
                   <Separator layoutX="14.0" layoutY="334.0" prefHeight="10.0" prefWidth="608.0" />
                   <Label layoutX="12.0" layoutY="422.0" text="Clases (opcional, puede seleccionar varias)" />
                   <CheckBox id="aquagym" fx:id="chkAquagym" layoutX="13.0" layoutY="447.0" mnemonicParsing="false" text="Aquagym" />
-                  <CheckBox id="bodypump" fx:id="chkBodyPump" layoutX="99.0" layoutY="447.0" mnemonicParsing="false" text="Body Pump" />
-                  <CheckBox id="boxeo" fx:id="chkBoxeo" layoutX="201.0" layoutY="447.0" mnemonicParsing="false" text="Boxeo" />
-                  <CheckBox id="crosstraining" fx:id="chkCrossTraining" layoutX="269.0" layoutY="447.0" mnemonicParsing="false" text="Cross Training" />
-                  <CheckBox id="estiramientos" fx:id="chkEstiramientos" layoutX="375.0" layoutY="447.0" mnemonicParsing="false" text="Estiramientos" />
-                  <CheckBox id="funcional" fx:id="chkFuncional" layoutX="481.0" layoutY="447.0" mnemonicParsing="false" text="Funcional" />
+                  <CheckBox id="bodypump" fx:id="chkBodyPump" layoutX="107.0" layoutY="447.0" mnemonicParsing="false" text="Body Pump" />
+                  <CheckBox id="boxeo" fx:id="chkBoxeo" layoutX="211.0" layoutY="447.0" mnemonicParsing="false" text="Boxeo" />
+                  <CheckBox id="crosstraining" fx:id="chkCrossTraining" layoutX="280.0" layoutY="447.0" mnemonicParsing="false" text="Cross Training" />
+                  <CheckBox id="estiramientos" fx:id="chkEstiramientos" layoutX="398.0" layoutY="447.0" mnemonicParsing="false" text="Estiramientos" />
+                  <CheckBox id="funcional" fx:id="chkFuncional" layoutX="514.0" layoutY="447.0" mnemonicParsing="false" text="Funcional" />
                   <CheckBox id="hiit" fx:id="chkHiit" layoutX="13.0" layoutY="475.0" mnemonicParsing="false" text="HIIT" />
-                  <CheckBox id="natacion" fx:id="chkNatacion" layoutX="65.0" layoutY="475.0" mnemonicParsing="false" text="Natación" />
-                  <CheckBox id="pilates" fx:id="chkPilates" layoutX="147.0" layoutY="475.0" mnemonicParsing="false" text="Pilates" />
-                  <CheckBox id="spinning" fx:id="chkSpinning" layoutX="217.0" layoutY="475.0" mnemonicParsing="false" text="Spinning" />
-                  <CheckBox id="yoga" fx:id="chkYoga" layoutX="297.0" layoutY="475.0" mnemonicParsing="false" text="Yoga" />
-                  <CheckBox id="zumba" fx:id="chkZumba" layoutX="358.0" layoutY="475.0" mnemonicParsing="false" text="Zumba" />
+                  <CheckBox id="natacion" fx:id="chkNatacion" layoutX="80.0" layoutY="475.0" mnemonicParsing="false" text="Natación" />
+                  <CheckBox id="pilates" fx:id="chkPilates" layoutX="178.0" layoutY="475.0" mnemonicParsing="false" text="Pilates" />
+                  <CheckBox id="spinning" fx:id="chkSpinning" layoutX="269.0" layoutY="475.0" mnemonicParsing="false" text="Spinning" />
+                  <CheckBox id="yoga" fx:id="chkYoga" layoutX="375.0" layoutY="475.0" mnemonicParsing="false" text="Yoga" />
+                  <CheckBox id="zumba" fx:id="chkZumba" layoutX="481.0" layoutY="475.0" mnemonicParsing="false" text="Zumba" />
                   <Label layoutX="13.0" layoutY="524.0" text="IBAN" />
                   <TextField id="campoIban" fx:id="txtIban" layoutX="14.0" layoutY="542.0" prefHeight="26.0" prefWidth="600.0" promptText="ES00 0000 0000 0000 0000 0000" />
                </children>
@@ -102,13 +102,13 @@
                <children>
                   <TableView id="tablaSocios" fx:id="tablaSocios" layoutY="37.0" prefHeight="641.0" prefWidth="638.0">
                     <columns>
-                      <TableColumn fx:id="colSocio" prefWidth="258.20001524686813" text="Socio" />
-                      <TableColumn fx:id="colFechaNacimiento" prefWidth="161.199951171875" text="Fecha de nacimiento" />
+                      <TableColumn fx:id="colSocio" prefWidth="228.40002745389938" text="Socio" />
+                      <TableColumn fx:id="colFechaNacimiento" prefWidth="191.59996032714844" text="Fecha de nacimiento" />
                         <TableColumn fx:id="colCuota" prefWidth="106.199951171875" text="Cuota" />
                         <TableColumn fx:id="colEstado" prefWidth="110.39998779296877" text="Estado" />
                     </columns>
                   </TableView>
-                  <Label layoutX="285.0" text="Socios" textAlignment="CENTER">
+                  <Label layoutX="212.0" styleClass="titulo-tabla" text="Socios registrados" textAlignment="CENTER">
                      <font>
                         <Font size="24.0" />
                      </font>
@@ -118,6 +118,6 @@
       </SplitPane>
    </center>
    <bottom>
-      <Label prefHeight="42.0" prefWidth="408.0" text="Atajos de utilidad: Ctrl+N (Nuevo socio) - Ctrl+G (Guardar) - Ctrl+E (Eliminar)" textAlignment="CENTER" BorderPane.alignment="CENTER" />
+      <Label prefHeight="42.0" prefWidth="604.0" text="Atajos de utilidad: Ctrl+N (Nuevo socio) - Ctrl+G (Guardar) - Ctrl+E (Eliminar)" textAlignment="CENTER" BorderPane.alignment="CENTER" />
    </bottom>
 </BorderPane>

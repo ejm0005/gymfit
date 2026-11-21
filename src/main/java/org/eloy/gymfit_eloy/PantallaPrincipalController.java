@@ -44,10 +44,10 @@ public class PantallaPrincipalController {
 
     @FXML
     public void initialize() {
-        // 1. Cargar opciones en el ComboBox de provincias
+        //Cargar opciones en el ComboBox de provincias
         cbProvincia.getItems().addAll("Sevilla", "Madrid", "Barcelona", "Valencia", "Málaga", "Zaragoza", "Bilbao");
 
-        // 2. Configurar enlace de columnas con la clase Socio
+        //Configurar los enlaces de columnas con la clase Socio
         colSocio.setCellValueFactory(cellData -> new javafx.beans.property.SimpleStringProperty(cellData.getValue().getNombreCompleto()));
         colFechaNacimiento.setCellValueFactory(new PropertyValueFactory<>("fechaNacimiento"));
         colCuota.setCellValueFactory(new PropertyValueFactory<>("tipoCuota"));
@@ -55,7 +55,7 @@ public class PantallaPrincipalController {
 
         tablaSocios.setItems(listaSocios);
 
-        // 3. Listener para cargar los datos en el formulario al hacer clic en un socio de la tabla
+        //Cargar los datos en el formulario al hacer clic en un socio de la tabla
         tablaSocios.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             if (newValue != null) {
                 socioSeleccionado = newValue;
@@ -233,7 +233,7 @@ public class PantallaPrincipalController {
 
     private boolean validarFormulario() {
         if (txtNombre.getText().trim().isEmpty() || txtPrimerApellido.getText().trim().isEmpty() || dpFechaNacimiento.getValue() == null || txtIban.getText().trim().isEmpty()) {
-            mostrarAlerta(Alert.AlertType.ERROR, "Error de validación", "Hay campos obligatorios sin rellenar.");
+            mostrarAlerta(Alert.AlertType.ERROR, "Error de validación", "Hay campos obligatorios sin rellenar. Rellene todos los campos e inténtelo de nuevo.");
             return false;
         }
         String iban = txtIban.getText().trim().toUpperCase();
@@ -341,7 +341,7 @@ public class PantallaPrincipalController {
     }
 
     private void configurarAtajosTeclado() {
-        // Platform.runLater asegura que la Scene ya esté asociada a los controles tras cargar el FXML
+        //Asegurar que la Scene ya esté asociada a los controles tras cargar el FXML
         Platform.runLater(() -> {
             if (txtNombre.getScene() != null) {
                 txtNombre.getScene().getAccelerators().put(
